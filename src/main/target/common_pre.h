@@ -43,7 +43,7 @@
 
 #ifdef STM32F3
 #define MINIMAL_CLI
-#define USE_DSHOT
+//#define USE_DSHOT
 #define USE_GYRO_DATA_ANALYSE
 #endif
 
@@ -147,11 +147,11 @@
 #define USE_IMU_CALC
 #define USE_PPM
 #define USE_SERIAL_RX
-#define USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
-#define USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
-#define USE_SERIALRX_SBUS       // Frsky and Futaba receivers
-#define USE_SERIALRX_SPEKTRUM   // SRXL, DSM2 and DSMX protocol
-#define USE_SERIALRX_SUMD       // Graupner Hott protocol
+//#define USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
+//#define USE_SERIALRX_IBUS       // FlySky and Turnigy receivers
+//#define USE_SERIALRX_SBUS       // Frsky and Futaba receivers
+//#define USE_SERIALRX_SPEKTRUM   // SRXL, DSM2 and DSMX protocol
+//#define USE_SERIALRX_SUMD       // Graupner Hott protocol
 
 #if (FLASH_SIZE > 128)
 #define PID_PROFILE_COUNT 3
@@ -162,30 +162,36 @@
 #endif
 
 #if (FLASH_SIZE > 64)
-#define USE_ACRO_TRAINER
-#define USE_BLACKBOX
+//#define USE_ACRO_TRAINER
+//#define USE_BLACKBOX
 #define USE_CLI_BATCH
 #define USE_RESOURCE_MGMT
 #define USE_RUNAWAY_TAKEOFF     // Runaway Takeoff Prevention (anti-taz)
-#define USE_SERVOS
+//#define USE_SERVOS
 #define USE_TELEMETRY
 #define USE_TELEMETRY_FRSKY_HUB
 #define USE_TELEMETRY_SMARTPORT
 #endif
 
 #if (FLASH_SIZE > 128)
-#define USE_GYRO_OVERFLOW_CHECK
+//#define USE_GYRO_OVERFLOW_CHECK
 #define USE_YAW_SPIN_RECOVERY
-#define USE_DSHOT_DMAR
+//#define USE_DSHOT_DMAR
 #define USE_SERIALRX_FPORT      // FrSky FPort
 #define USE_TELEMETRY_CRSF
 #define USE_TELEMETRY_SRXL
+
+#define USE_GPS
+#define USE_GPS_NMEA
+#define USE_GPS_UBLOX
+#define USE_GPS_RESCUE
+#endif
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 12))
 #define USE_CMS
 #define USE_MSP_DISPLAYPORT
 #define USE_MSP_OVER_TELEMETRY
-#define USE_LED_STRIP
+//#define USE_LED_STRIP
 #endif
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 11))
@@ -237,14 +243,13 @@
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 3))
 #ifdef USE_SERIALRX_SPEKTRUM
-#define USE_SPEKTRUM_BIND
-#define USE_SPEKTRUM_BIND_PLUG
-#define USE_SPEKTRUM_REAL_RSSI
-#define USE_SPEKTRUM_FAKE_RSSI
-#define USE_SPEKTRUM_RSSI_PERCENT_CONVERSION
-#define USE_SPEKTRUM_VTX_CONTROL
-#define USE_SPEKTRUM_VTX_TELEMETRY
-#define USE_SPEKTRUM_CMS_TELEMETRY
+//#define USE_SPEKTRUM_BIND
+//#define USE_SPEKTRUM_REAL_RSSI
+//#define USE_SPEKTRUM_FAKE_RSSI
+//#define USE_SPEKTRUM_RSSI_PERCENT_CONVERSION
+//#define USE_SPEKTRUM_VTX_CONTROL
+//#define USE_SPEKTRUM_VTX_TELEMETRY
+//#define USE_SPEKTRUM_CMS_TELEMETRY
 #endif
 #endif
 
@@ -269,10 +274,7 @@
 #if (FLASH_SIZE > 256)
 #define USE_AIRMODE_LPF
 #define USE_DASHBOARD
-#define USE_GPS
-#define USE_GPS_NMEA
-#define USE_GPS_UBLOX
-#define USE_GPS_RESCUE
+
 #define USE_GYRO_DLPF_EXPERIMENTAL
 #define USE_OSD
 #define USE_OSD_OVER_MSP_DISPLAYPORT
